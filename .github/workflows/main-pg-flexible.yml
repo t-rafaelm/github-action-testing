@@ -13,5 +13,5 @@ jobs:
      - uses: azure/postgresql@v1
        with:
         connection-string: ${{ secrets.AZURE_POSTGRESQLFLEXIBLE_CONNECTION_STRING }}
-        server-name: server091625644.postgres.database.azure.com
-        plsql-file: "employeedb.sql"
+        server-name: t-rafaelm-pg-test.postgres.database.azure.com
+        plsql-file: "employeedb.sql" 
