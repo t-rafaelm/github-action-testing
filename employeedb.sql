@@ -5,7 +5,8 @@ CREATE TABLE employees (
    date_of_birth DATE                   ,
    phone_number  VARCHAR(1000) NOT NULL,
    junk          CHAR(1000)             ,
-   CONSTRAINT employees_pk PRIMARY KEY (employee_id)
+   CONSTRAINT employees_pk PRIMARY KEY (employee_id),
+   test_char     VARCHAR(1000) NOT NULL
 );
 CREATE FUNCTION random_string(minlen NUMERIC, maxlen NUMERIC)
 RETURNS VARCHAR(1000)
