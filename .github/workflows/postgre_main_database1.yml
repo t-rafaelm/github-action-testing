@@ -1,3 +1,4 @@
+name: postgre_main_database1
 on: 
   push: 
     branches: [main]
