@@ -1,7 +1,7 @@
 
 # Workflow configuration file for GitHub actions for Azure postgresql server
 
-name: postgresql_github-action-testing_database1
+name:postgresql_github-action-testing_database1
 
 on: 
   push: 
