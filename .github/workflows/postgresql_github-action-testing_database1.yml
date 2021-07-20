@@ -1,0 +1,28 @@
+# Workflow configuration file for GitHub actions for Azure postgresql server
+name: 0
+
+on: 
+  push: 
+    branches: [1]
+  pull_request:
+    branches: [1]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - uses: azure/5@v1
+      with:
+        server-name: database1
+        connection-string: ${{ secrets.AZURE_4FLEXIBLE_CONNECTION_STRING }}
+        plsql-file: "thepath.sql"
+
+    - name: logout
+      run: |
+        az logout
