@@ -4,23 +4,26 @@ name: Azure Service for something cool
 
 on: 
 push: 
-  branches: [t-rafaelm-patch-1]
+    branches: [t-rafaelm-patch-1]
 pull:
-  branches: [t-rafaelm-patch-1]
-  workflow_dispatch:
+    branches: [t-rafaelm-patch-1]
+    workflow_dispatch:
+
 jobs:
-  build:
+build:
     runs-on: ubuntu-latest
-  steps:
-   - uses: actions/checkout@v1
-   - uses: Azure/login@v1
-     with:
-       creds: ${{ secrets.AZURE_CREDENTIALS }}
-   - uses: azure/postgresql@v1
-     with:
-      server-name: database1
-      connection-string: ${{ ecrets.AZURE_POSTGRESQLFLEXIBLE_CONNECTION_STRING }}
-      plsql-file: "sadf"
-   - name: logout
+    steps:
+    - uses: actions/checkout@v1
+    - uses: Azure/login@v1
+    with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+- uses: azure/postgresql@v1
+  with:
+    server-name: database1
+    connection-string: ${{ ecrets.AZURE_POSTGRESQLFLEXIBLE_CONNECTION_STRING }}
+    plsql-file: "sadf"
+    
+- name: logout
      run: |
-       az logout
+        az logout
