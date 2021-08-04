@@ -21,7 +21,7 @@ jobs:
       with:
         server-name: rafaelmpersonalflex.postgres.database.azure.com
         connection-string: ${{ secrets.AZURE_POSTGRESQLFLEXIBLE_CONNECTION_STRING }}
-        plsql-file: "employeedb.sql"
+        sql-file: "employeedb.sql"
 
     - name: logout
       run: |
