@@ -17,7 +17,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - uses: azure/postgresql@v1
+    - uses: azure/mysql@v1
       with:
         server-name: rafaelmpersonalflex.postgres.database.azure.com
         connection-string: ${{ secrets.AZURE_POSTGRESQLFLEXIBLE_CONNECTION_STRING }}
